@@ -49,7 +49,7 @@ export default function Explore() {
           </p>
           <div className="space-x-4">
             <Link
-              to="/auth"
+              to="/auth/signup"
               className=" font-manrope bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition duration-300"
             >
               Sign Up

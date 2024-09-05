@@ -6,7 +6,7 @@ export default function Auth() {
   return (
     <div className="auth-container">
       <Routes>
-        <Route path="" element={<Login />} />
+        <Route index element={<Login />} />
         <Route path="/signup" element={<Signup />} />
       </Routes>
     </div>
