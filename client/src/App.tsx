@@ -1,15 +1,18 @@
-import Hero from './pages/Hero'
-import Explore from './pages/Explore'
-import Footer from './pages/Footer'
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Hero from "./pages/Hero";
+import Explore from "./pages/Explore";
+import AuthPage from "./pages/Auth";
 
 function App() {
   return (
-    <div>
-      <Hero />
-      <Explore />
-      <Footer />
-    </div>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Hero />} />
+        <Route path="/explore" element={<Explore />} />
+        <Route path="/auth" element={<AuthPage />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
