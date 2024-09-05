@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Hero from "./pages/Hero";
 import Explore from "./pages/Explore";
-import AuthPage from "./pages/Auth";
+import Auth from "./pages/Auth";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/explore" element={<Explore />} />
-        <Route path="/auth" element={<AuthPage />} />
+        <Route path="/auth/*" element={<Auth />} />
       </Routes>
     </Router>
   );

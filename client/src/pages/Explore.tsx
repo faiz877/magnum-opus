@@ -5,8 +5,16 @@ import { Link } from "react-router-dom";
 export default function Explore() {
   return (
     <div>
-      <div id="explore-section" className="mx-auto px-4 py-8">
-        <h3 className="text-3xl font-manrope font-bold mb-8">Explore</h3>
+      <div id="explore-section" className="mx-auto px-4 py-8 relative">
+        <div className="flex items-center justify-between mb-2">
+          <h3 className="text-3xl font-manrope font-bold mb-8">Explore</h3>
+          <Link
+            to="/auth"
+            className="absolute top-8 right-4 bg-blue-600 border  text-white py-2 px-4 rounded-full hover:bg-blue-600/80 hover:text-black transition duration-300 "
+          >
+            Sign Up/Login
+          </Link>
+        </div>
         <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4">
           {images.map((image: ImageData) => (
             <div key={image.id} className="mb-4 break-inside-avoid">
